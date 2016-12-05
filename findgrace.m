@@ -1,6 +1,10 @@
 clear
 clc
 
+
+%The mainFolder variable will need to be adjusted to reflect where you
+%stored the grace data.  
+
 mainFolder = 'D:/Grace/Grace';
 
 files = dir(mainFolder);
@@ -174,7 +178,7 @@ January = ESWD(Jan3)
 
 [r4,lat,long] = plm2xyz(January,1);
 figure(6)
-plotonearth(r4,0,'mercator')
+plotonearth(r4,1,'mercator')
 c = colorbar
 c.Label.String = 'Meters'
 title('January Excess Water')

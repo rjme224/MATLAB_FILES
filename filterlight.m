@@ -12,7 +12,7 @@ monthsorted(1:6,3:4) = 0;
 [monthsorted(:,3:4)] = (monthsorted(:,3:4)*G*M)/(g*r);
 
 %Filter the data with a light filter
-filterlight = exp(-(monthsorted(:,1)/30).^2);
+filterlight = exp(-(monthsorted(:,1)/5).^2);
 
 %Apply Filter (either heavy or light)
 [monthsorted(:,3)] = monthsorted(:,3).*filterlight;

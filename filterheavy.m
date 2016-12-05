@@ -9,8 +9,6 @@ monthsorted = sortrows(month,1);
 monthsorted(1:6,3:4) = 0;
 
 
-
-
 %Filter the data with a heavy filter
 FilterHeavy = exp(-(monthsorted(:,1)/25).^4);
 
